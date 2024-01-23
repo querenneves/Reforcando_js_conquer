@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Minha página HTML</title>
+</head>
+
+<body>
+    <h1>Testando!</h1>
+</body>
+<script>
+    // explorando comandos básicos
+    const alterarCor = () => {
+        let body = document.querySelector("body");
+        body.style.backgroundColor = "green";
+    }
+    alterarCor();
+    /*
+       const a = 5e6; // 5000000
+       const b = 2e-4; // //0.0002
+    
+        // Checando se é inteiro
+        const a = 12;
+        console.log(Number.isInteger(a));
+    
+        // Checando se é um NaN
+        const b = NaN;
+        console.log(Number.isNaN(b));
+    
+        //Mostrar até a segunda casa decimal
+        const c = 13.4567;
+        console.log(c.toFixed(2));
+    
+        // Maior safe integer
+        const a = Number.MIN_SAFE_INTEGER;
+        console.log(a)
+        
+        // Maior valor possível
+        const b = Number.MAX_VALUE;
+        console.log(b);
+        
+        // Infinito negativo
+        const c = Number.NEGATIVE_INFINITY;
+        console.log(c); // -Infinity
+    
+        const a = 12.45;
+        console.log(Math.round(a)); // 12
+
+        const b = 5.1;
+        console.log(Math.ceil(b)); // 6
+
+        // Criando a variável com número aleatório entre 0 e 59
+        const numeroAleatorio = Math.floor(Math.random() * 60);
+
+        // Exibindo o número no console
+        console.log(numeroAleatorio);
+
+        // Gerando um aleatório entre 0 e 1
+        const a = Math.random();
+        console.log(a); // 0.45194946554004156
+
+        // Multiplicando por 100 e arredondando para baixo
+        // Gerando um aleatório entre 0 e 99
+        const b = Math.floor(a*100);
+        console.log(b); // 45
+
+        // Usando o objeto String
+        const a = 256;
+        const b = a.toString(); // transforma valor
+
+        console.log(b);
+        console.log(typeof (b));
+
+        var nome = "Luís";
+        var sobrenome = "Silva";
+        var frase = "O nome completo do meu amigo é " + nome + " " + sobrenome
+
+        console.log(frase);
+
+        // Contatenando
+        var nome = "Luis";
+        var carro = "Gol";
+        var frase = `Meu amigo ${nome} comprou um carro novo, um ${carro}. Mas infelizmente o ${nome} não irá poder pagar todas as parcelas do ${carro}`
+
+        console.log(frase);
+
+        // Conta caracteres
+        var sobrenome = "Ferreira da Silva";
+
+        console.log(sobrenome.length) // 17
+
+        // Pega o caratere na posição passada
+        var sobrenome = "Ferreira da Silva";
+
+        console.log(sobrenome.charAt(5)); // 17
+
+        var sobrenome = "Ferreira da Silva";
+
+        console.log(sobrenome.indexOf("a")); // 7
+
+        // Separando 
+        var esportes = "futebol-surf-volei-basquete-atletismo-natacao";
+        var arrayEsportes = esportes.split("-");
+
+        console.log(arrayEsportes)
+        // Remove espaços
+        var senha = "   senha 12 3   ";
+        var senhaSemEspacos = senha.trim();
+
+        console.log(senhaSemEspacos); 
+        
+        // Substitui
+        var nomePais = "Brasil";
+        var frase = "O país é uma das maiores nações do mundo";
+
+        console.log(frase.replace("país", nomePais));
+
+        // Corta
+        var frase = "Aprendendo Javascript";
+        var frase2 = frase.slice(11,21);
+
+        console.log(frase2)
+
+        // Torna maiuscula ou minuscula a letra
+        let curso = "Conquer";
+
+        console.log(curso.toUpperCase()); // CONQUER
+        console.log(curso.toLowerCase()); // conquer
+
+        // desafio
+        const fullname = "Queren Neves Dos Santos";
+        const fullNameLength = fullname.length;
+
+        console.log(fullname[fullNameLength]);
+        console.log(fullname[fullNameLength - 1]);
+        
+        // Numeros nulos (null)
+        console.log(typeof(null));
+
+        // == iguais
+        // === idênticas
+        
+        console.log(null ==  undefined); // true
+        console.log(null ===  undefined); // false
+        console.log(null ==  null); // true
+        // Objetos com propriedades de outro objeto
+        let user = {
+            nome: "Queren", // key, value
+            idade: 24,
+            empregado: true,
+            nacionalidade: "Brasileiro"
+        };
+
+        let computador = {
+             marca: "positivo",
+             cor: "branco"
+        };
+
+        let objetoCarro ={
+            modelo: "Fox",
+            marca: "Volkswagen"
+        }
+
+        user["computador"] = "dhell";
+        // alterando valor 
+        user["nacionalidade"] = "Italiano";
+        user["idade"] = 28;
+        delete user["empregado"];
+*/
+        const value1 = "42"; // string
+        const value2 = 5; // number
+
+        var difference = value1 - value2; // 37 (number)
+
+        // Priorizada a concatenação
+        const a = "9"; // string
+        const b = 5; // number
+
+        var sum = a + b; // 95 (string)
+
+        // Convertendo a string para um número - desafio
+        var numeroConvertido = parseFloat("-456.2");
+
+        // Imprimindo o resultado
+        console.log(numeroConvertido);
+
+        // Imprimindo o tipo
+        console.log(typeof(numeroConvertido));
+
+        // Concatenando o número com uma string vazia
+        var resultadoConcatenado = numeroConvertido + " ";
+
+        // Imprimindo o resultado
+        console.log(resultadoConcatenado);
+
+        // Imprimindo o tipo
+        console.log(typeof(resultadoConcatenado))
+
+        let desafio = {
+            nome: "Plugg.to",
+            fundacao: "2015",
+            cursos: {dados:["excel", "SQL"],
+                    liderança: ["Nubia", "JavaScript"],
+                    marketing: ["github", "linkedin"]},
+
+        };
+</script>
+
+</html>
