@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Minha página HTML</title>
+</head>
+
+<body>
+    <h1>Testando!</h1>
+</body>
+<script>
+    /*
+         // Booleanos
+         Boolean(undefined) // false
+         Boolean (0) // false
+         Boolean("Plugg.to") // true
+         Boolean(10)  // true
+        
+         // !=  valor diferente
+        // !==  valor ou tipo diferente
+        
+        // desafio
+        var idade = 25
+        
+        Boolean(idade != 24) // é diferente de 24? (true)
+        
+        var idade = 24
+        
+        Boolean(idade != 24) // é diferente de 24? (false)
+        
+        var idade = 30; // Um número diferente de 24
+        
+        Boolean(idade !== 24); // Retorna true, porque 30 é diferente de 24
+        
+        var idade = 24; // Um número, exatamente 24
+        
+        Boolean(idade !== 24); // Isso agora retornará false
+        
+        // if e else
+        
+        let color = "black"
+        if (color === "black"){
+            console.log("A cor é preta")
+        }
+        
+        let color = "blue"
+        if (color === "black"){
+            console.log("A cor é preta")
+        } else {
+            console.log("A cor não é preta")
+        }
+        
+        // else if 
+        let color = "blue"
+        if (color === "black"){
+            console.log("A cor é preta")
+        } else if (color === "red"){
+            console.log("A cor não é vermelha")
+        } else {
+            console.log("A cor não é nem preta nem vermelha")
+        }
+        
+        // operador ternário (reduzido)
+        let empresa = "Linx";
+        let retorno = empresa === "Plugg.to"?
+        "Você está no lugar certo!": "Você conhece a Plugg.to?";
+        console.log(retorno)
+        
+        // desafio
+        let x = 50
+        let z = 50
+        let y = x > z?
+        "X é maior do eu o Y": "Y são iguais X";
+        console.log(y)
+    
+        // Switch Case
+        let color = "Red";
+    
+        switch (color) {
+            case "Red":
+                mensagem = "Pare";
+                break;
+            case "Green":
+                mensagem = "Pode passar!";
+            default:
+                mensagem = "Atenção";
+        }
+    
+        let age = 15
+    
+        switch (age) {
+            case 15:
+            case 16:
+            case 17:
+                console.log("Este usuário não está apto a dirigir");
+                break;
+            case 18:
+            case 19:
+            case 20:
+                console.log("Este usuário está apto a dirigir");
+        }
+    
+        let ballet = 17;
+    
+        switch (ballet) {
+            case 8:
+            case 9:
+            case 10:
+                console.log("Turma infantil");
+                break;
+            case 11:
+            case 12:
+            case 13:
+                console.log("Turma juvenil");
+                break;
+            case 14:
+            case 15:
+            case 16:
+                console.log("Turma jovem adulto");
+                break;
+            default:
+                console.log("Entre em contato com a secretaria para mais informações.");
+                break;
+        }
+    
+        // Desafio conquer - CALCULADORA
+        function calculadora() {
+            const operacao = Number(prompt('Escolha uma operação:\n 1 - soma (+) \n 2 - subtracao (-)\n 3 - multiplicacao (*)\n 4 - divisão Real (/)\n 5 - divisão Inteira (%)\n 6 - potenciação(**)'))
+    
+            if (!operacao || operacao >= 7) {
+                alert("Erro - Operação inválida!");
+                calculadora();
+            } else {
+                let n1 = Number(prompt("Insira o primeiro valor:"));
+                let n2 = Number(prompt("Insira o segundo valor:"));
+                let resultado;
+    
+                if (!n1 || !n2) {
+                    alert("Erro - Operação inválida!");
+                    calculadora();
+                } else {
+                    function soma() {
+                        resultado = n1 + n2;
+                        alert(`${n1} + ${n2} = ${resultado}`);
+                    }
+                    function subtracao() {
+                        resultado = n1 - n2;
+                        alert(`${n1} -  ${n2} = ${resultado}`);
+                    }
+                    function multiplicacao() {
+                        resultado = n1 * n2;
+                        alert(`${n1} * ${n2} = ${resultado}`);
+                    }
+                    function divisaoReal() {
+                        resultado = n1 / n2;
+                        alert(`${n1} / ${n2} = ${resultado}`);
+                    }
+                    function divisaoInteira() {
+                        resultado = n1 % n2;
+                        alert(` O resto da divisão entre ${n1} e ${n2} é igual a ${resultado}`);
+                    }
+                    function potenciacao() {
+                        resultado = n1 ** n2;
+                        alert(` ${n1} elevado à ${n2} é igual a ${resultado}`);
+                    }
+    
+                    if(operacao == 1){
+                        soma();
+                    } else if (operacao == 2) {
+                        subtracao();
+                    } else if (operacao == 3) {
+                        multiplicacao();
+                    } else if (operacao == 4) {
+                        divisaoReal();
+                    } else if (operacao == 5) {
+                        divisaoInteira();
+                    } else if (operacao == 6) {
+                        potenciacao();
+                    }
+                }
+            }
+        }
+    
+        calculadora()
+      
+        // Estrutura de repetição
+        for (let i = 0 ; i <= 10; i++){
+            console.log(i);
+        }
+    
+        // exercicio: listar idades de numero par
+            const ages = {
+                Robert: 23,
+                Camila: 21,
+                Alfredo: 45,
+                Luana: 12,
+                Denilson: 68,
+            };
+    
+            for (const person in ages) {
+                if (ages[person] % 2 === 0) {
+                    console.log(`${person} tem uma idade par: ${ages[person]}`);
+                }
+            }
+        // exercicio facil: listando
+            const names = ["Robert", "Camila", "Alfredo", "Luana", "Denilson"];
+            // inteiração por meio de valores 
+            for (const name of names) {
+                console.log(name);
+            }
+    
+        // exercicio medio: somando
+        const numbers = [2,4,8,16,32,64,128,256,512,1024,2048];
+        let sum = 0;
+    
+        for (const number of numbers){
+            sum += number;
+        }
+    
+        console.log("A soma é:", sum);
+    
+        // exercicio dificil: media de nota c/ msg 
+            const notas = {
+                bimestre1: 7.0,
+                bimestre2: 3.7,
+                bimestre3: 6.4,
+                bimestre4: 8.6
+            }
+    
+            let soma = 0;
+            let quantidade = 0;
+    
+            for (const nota in notas) {
+                soma += notas[nota];
+                quantidade++;
+            }
+    
+            const media = soma / quantidade;
+    
+            console.log("A média é:", media);
+    
+            if (media >= 7) {
+                console.log("Aluno aprovado");
+            } else {
+                console.log("Aluno reprovado");
+            }
+            
+            let count = 1;
+    
+            while (count < 5){
+                console.log(`Estou sendo executado pela ${count} vez.`);
+                count++;
+            }
+        
+        // exercicio com do : aniversário
+            let birthYear = 1999;
+            let currentYear = new Date().getFullYear();
+            do {
+                console.log(birthYear);
+                birthYear++;
+            } 
+    
+        // exercicio com while : aniversário
+            let birthYear = 1999; 
+            const currentYear = new Date().getFullYear();
+    
+            while (birthYear <= currentYear) {
+                console.log(birthYear);
+                birthYear++;
+            }
+      
+        // usando as duas soluções
+            let birthYear = 2000; 
+            const currentYear = new Date().getFullYear();
+    
+            console.log("Listando com while:");
+            while (birthYear <= currentYear) {
+                console.log(birthYear);
+                birthYear++;
+            }
+    
+        // Resetando birthYear para o valor inicial para o próximo loop
+        birthYear = 2000; 
+    
+            console.log("Listando com do...while:");
+            do {
+                console.log(birthYear);
+                birthYear++;
+            } while (birthYear <= currentYear);
+     
+        const fib = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+        for (let number of fib){
+            if (number > 50){
+                break;
+            }
+            console.log(number);
+        }
+    
+        // outro exemplo
+    
+        let i = 0;
+    
+        while (true){
+            console.log(i++);
+    
+            if (i >= 10){
+                break;
+            }
+        }
+    
+    //desafio: credito maior que dois mil
+    const clientes = [1000, 1200, 1400, 1500, 1800, 2000, 2200, 2400, 2500, 2800];
+    for (let number of clientes) {
+        if (number <= 2000) {
+            continue; 
+        }
+        console.log(number); 
+    }
+
+    // mão na massa
+    let lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i] <= 5) continue;
+
+        if (lista[i] <= 15) break;
+
+        console.log(lista[i]);
+    }
+  
+        // arrays 
+        const esportes = ['Basquete', 'Futebol', 'Vôlei'];
+        esportes.push('Xadrez'); // add
+        console.log(esportes);
+    
+        const esportes = ['Basquete', 'Futebol', 'Vôlei'];
+        esportes.unshift('Atletismo'); // add inicio do array
+        console.log(esportes);
+    
+        // deletando info
+        const esportes = ['Basquete', 'Futebol', 'Vôlei'];
+        esportes.pop(); // remove ultimo item do array
+        console.log(esportes);
+    
+        const esportes = ['Basquete', 'Futebol', 'Vôlei'];
+        esportes.shift(); // remove primeiro item do array
+        console.log(esportes);
+    
+        // mão na massa
+        const array = ['Lógica de Programação', 'HTML', 'CSS', 'JavasScript', 'Github', 'Git', 'Algoritmos', 'Dados'];
+        array.pop();
+        array.shift();
+        array.push(7);
+        console.log(array.length); // contagem de itens
+    
+        // Conferindo se era array
+        let arr = [1, 2, 3, 4, 5];
+        if (Array.isArray(arr)){
+            console.log("É um array")
+        }
+    
+        // contagem do array sendo que começo sempre é zero
+        let array1 = [1, 2, 3, 4, 5];
+        console.log(array1[1]);
+    
+        // localizar array multidimensional
+        const array3 = [[1,1], [3,4], [5,6], [7,8],[9,10], [11, 12]];
+        console.log(array3[3][1]);
+    
+        // mão na massa
+        const matriz = [
+            [
+                11, 12, 13,
+                21, 22, 23,
+                31, 32, 33
+            ],
+            [
+                41, 42, 43,
+                51, 52, 53,
+                61, 62, 63
+            ],
+            [
+                71, 72, 73,
+                81, 82, 83,
+                91, 92, 93
+            ]
+        ];
+        console.log(matriz[2][4]);
+        console.log(matriz[1][7]);
+        console.log(matriz[0][8]);
+        console.log(matriz[2][6]);
+        console.log(matriz[1][0]);
+    
+        // alterando array
+        const esportes = ['Basquete', 'Vôlei', 'Futebol'];
+        esportes[0] = 'Atletismo'
+        esportes.sort();   // ordenando
+        console.log(esportes);
+    
+        // ordenando array
+        const numero = [23,30,43,77,24,11,33,34];
+        numero.sort();
+        console.log(numero);
+    
+        const array1 = [1, 2, 3, 4, 5];
+        for (let i = 0; i < array1.length; i++) {
+            console.log(array1[i])
+        }
+    
+        // mão na massa
+        const array = ['Lógica de Programação', 'HTML', 'CSS', 'JavasScript', 'Github', 'Git', 'Algoritmos', 'Dados'];
+        array.sort();
+        console.log(array);
+        console.log(array.length);
+        console.log(array[6]);
+        // desafio
+        function calcularMedia(numero) {
+            const soma = numero.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+            return soma / numero.length;
+        }
+        const numero = [23, 30, 43, 77, 24, 11, 33, 34];
+        const media = calcularMedia(numero);
+        console.log(media);
+    
+        // usando for 
+        function calcularMediaFor(numero) {
+            let soma = 0;
+            for (let i = 0; i < numero.length; i++) {
+                soma += numero[i];
+            }
+            return soma / numero.length;
+        }
+    
+        const numero = [23, 30, 43, 77, 24, 11, 33, 34];
+        const mediaFor = calcularMediaFor(numero);
+        console.log(mediaFor);
+*/    
+        // usando while
+        function calcularMediaWhile(numero) {
+            let soma = 0;
+            let i = 0;
+            while (i < numero.length) {
+                soma += numero[i];
+                i++;
+            }
+            return soma / numero.length;
+        }
+    
+        const numero = [23, 30, 43, 77, 24, 11, 33, 34];
+        const mediaWhile = calcularMediaWhile(numero);
+        console.log(mediaWhile); 
+
+</script>
+
+</html>
