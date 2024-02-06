@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Minha página HTML</title>
+</head>
+
+<body>
+    <h1>Treinando funções!</h1>
+</body>
+<script>
+/*
+    function aoQuadrado(numero) {
+        return numero * numero;
+    }
+
+    let res = aoQuadrado(4);
+
+    function curso(nomeDoCurso) {
+        alert("Estudando " + nomeDoCurso);
+    }
+
+    curso("JavaScript");
+
+    // mão na massa 
+    function converter(temperatura) {
+        return (temperatura * (9 / 5)) + 32;
+    }
+
+    let temp = converter(40);
+
+    function apresentacao(nome, cidade, filmeFavorito) {
+        console.log(`Meu nome é ${nome}, moro em ${cidade}, e meu filme favorito é ${filmeFavorito}`)
+    }
+    apresentacao("Caio", "Curitiba", "Curtindo a vida adoidado");
+
+    // mão na massa 
+    function adicao(numero1, numero2) {
+        return (numero1 + numero2);
+    }
+
+    let result = adicao(5, 1);
+
+    function exibeNumeros(...numeros) {
+        console.log(...numeros);
+    }
+
+    function sum(...values) {
+        let total = 0;
+
+        for (let i = 0; i < values.length; i++) {
+            total = total + values[i];
+        }
+
+        console.log(`A soma é ${total}`);
+    }
+
+    // mão na massa: encontrar maior número.
+    arr = [1, 3, 54, 23, 89, 8, 7, 0, 1, 44, 13, 11];
+
+    function encontrarMaiorNumero(arr) {
+        // Tratamento de erros
+        const arrValida = arr.every(item => typeof item === 'number' && isFinite(item));
+
+        if (!arrValida) {
+            console.log("A array contém número(s) inválido(s)!");
+            return;
+        }
+
+        const maiorNumero = Math.max(...arr);
+        return maiorNumero;
+    }
+
+    const resultado = encontrarMaiorNumero(arr);
+    if (resultado !== undefined) {
+        console.log(`O maior número é ${resultado}`);
+    }
+
+    // funções anônimas
+    let hello = function (platform) {
+        console.log("Seja bem vindo a " + platform);
+    };
+
+    hello("Conquer!");
+
+    setTimeout(function () {
+        console.log("Estou aprendendo a passar funções como parâmetro de funções");
+    }, 750);
+
+    let multiplicationResult = (function (x, y) {
+        return x * y;
+    })(3, 4);
+
+    console.log(multiplicationResult);
+*/
+    // mão na massa: calculando o IMC 
+    let calcularIMC = (function (peso, altura) {
+        let imc = peso / (altura * altura); 
+        return imc.toFixed(2);
+    })(60, 1.70); // Assumindo que a altura seja passada em metros. 
+
+    console.log(calcularIMC);
+/*
+    // desafio: função para cada botão
+    function adicao(firstNumber, secondNumber) {
+        return (firstNumber + secondNumber);
+    }
+
+    function subtracao(firstNumber, secondNumber) {
+        return (firstNumber - secondNumber);
+    }
+
+    function multiplicacao(firstNumber, secondNumber) {
+        return (firstNumber * secondNumber);
+    }
+
+    function divisao(firstNumber, secondNumber) {
+        return (firstNumber / secondNumber);
+    }
+
+    let result = divisao(10, 2);
+
+    var firstNumber;
+    var secondNumber = result;
+    */
+</script>
+
+</html>
